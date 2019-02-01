@@ -1,25 +1,16 @@
 {
   "root": true,
-  "env": {
-    "jest": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "jsx": true,
+    "project": "tsconfig.json"
   },
-  "plugins": ["jest"],
-  "extends": [
-    "plugin:jest/recommended",
-    "plugin:monorepo/recommended",
-    "xo",
-    "xo-typescript",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:monorepo/recommended"],
   "rules": {
-    // Enabled by `xo`
-    "valid-jsdoc": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    
     // Currently broken, see https://github.com/typescript-eslint/typescript-eslint/issues/170
     "@typescript-eslint/no-extraneous-class": "off",
-
     // Until https://github.com/typescript-eslint/typescript-eslint/pull/167 is merged
     "no-useless-constructor": "off"
   }
