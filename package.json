@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-monorepo-typescript",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.1.1",
+    "eslint": "5.12.1",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-config-xo": "0.26.0",
+    "eslint-config-xo-typescript": "0.6.0",
+    "eslint-formatter-pretty": "2.1.1",
+    "eslint-plugin-jest": "22.2.1",
+    "eslint-plugin-monorepo": "0.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "lerna": "3.10.7",
+    "prettier": "1.16.3",
+    "typescript": "3.2.4"
+  },
+  "scripts": {
+    "lerna": "lerna",
+    "lint": "eslint . --ext .ts,.tsx"
+  }
+}
